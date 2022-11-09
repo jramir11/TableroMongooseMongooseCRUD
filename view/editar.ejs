@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title>Modificar (editar)</title>
+</head>
+<body>
+
+    <form action="/editar/<%= manada[0].id %>" method="post">
+        <h1>Modificar la Manada : <%= manada[0].id %></h1>
+        
+        <label for="animal">Animal: </label><input type="text" name="animal" value=<%= manada[0].animal %> required><br>
+
+        <label for="totalintegrantes">Total de Integrantes: </label><input type="number" name="totalintegrantes" value=<%= manada[0].totalintegrantes %> required><br>
+
+        <label for="totalhijos">Total de Hijos: </label><input type="number" value=<%= manada[0].totalhijos %> name="totalhijos"><br>
+
+        <label for="continente">Continente: </label>
+        <select name="continente" id="continente" class="input-continente" value=<%= manada[0].continente %> >
+            <option value="America">America</option>
+            <option value="Europa">Europa</option>
+            <option value="Asia">Asia</option>
+            <option value="Oceania">Oceania</option>
+        </select><br><br>
+
+        <a href="/manada">Cancelar</a><br><br>
+
+        <button type="submit">Modificar</button>
+    </form>
+
+</body>
+</html>

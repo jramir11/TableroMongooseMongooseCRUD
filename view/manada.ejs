@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manadas Existentes</title>
+</head>
+<body>
+    <h2>Manadas Existentes</h2>
+    <form action="/manada" method="post">
+              <div>
+                 <% for (let i in manada) { %>
+                     Identificador : <label for="id"><%= manada[i].id %></label><br>
+                     Animal :<label for="manada"><%= manada[i].animal %></label><br>
+                     Total Integrantes Manada :<label for="manada"><%= manada[i].totalintegrantes %></label><br>
+                     Total Hijos Manada :<label for="manada"><%= manada[i].totalhijos %></label><br>
+                     Continente :<label for="manada"><%= manada[i].continente %></label><br>
+                     <a href="/editar?_id=<%= manada[i]._id %>">Modificar</a>
+                     <a href="/destruir?_id=<%= manada[i]._id %>">Eliminar</a>
+                     <p>---------------------------------------------------------------------------</p>
+                 <% } %>  
+             </div>
+            
+        <button type="submit">Nueva Manada</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <title>Eliminar</title>
+</head>
+<body>
+
+    <form action="/destruir/<%= manada[0].id %>" method="post">
+        <h1>Eliminar la Manada : <%= manada[0].id %></h1>
+        
+        <label for="animal">Animal: </label><%= manada[0].animal %><br>
+
+        <label for="totalintegrantes">Total de Integrantes: </label><%= manada[0].totalintegrantes %><br>
+
+        <label for="totalhijos">Total de Hijos: </label>value=<%= manada[0].totalhijos %><br>
+
+        <label for="continente">Continente: </label><%= manada[0].continente %><br><br>
+
+        <a href="/manada">Cancelar</a><br><br>
+
+        <button type="submit">Eliminar</button>
+    </form>
+
+</body>
+</html>
